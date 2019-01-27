@@ -2,9 +2,8 @@
 
 $stdin = fopen('php://stdin', 'r');
 $stdout = fopen('php://stdout', 'w');
-while(!feof($stdin))
+while(fscanf(STDIN, "%d %d\n", $hrs, $n)!=null)
 {
-    fscanf(STDIN, "%d %d\n", $hrs, $n);
     $sum = 0;
     for ($i = 0; $i < $n; $i++)
     {
