@@ -4,9 +4,12 @@ $stdin = fopen('php://stdin', 'r');
 $stdout = fopen('php://stdout', 'w');
 
 fscanf(STDIN, "%d\n", $n);
-for($i = 0; $i < $n; $i++)
+
+$line = fgets(STDIN);
+$arr = explode(" ", $line);
+for ($j = 0; $j < sizeof($arr); $j++)
 {
-    fscanf(STDIN, "%d ", $arr[$i]);
+    $arr[$j] = intval($arr[$j]);
 }
 fscanf(STDIN, "%d %d\n", $x, $k);
 $q = $x; // for position
